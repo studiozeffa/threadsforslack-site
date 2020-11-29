@@ -1,6 +1,6 @@
 import { NowRequest, NowResponse } from '@vercel/node'
 
-const subdomainParser = /^https:\/\/([a-zA-Z]+)\.threadsforslack\.com\/?$/
+const subdomainParser = /^([a-zA-Z]+)\.threadsforslack\.com\/?$/
 
 export default (req: NowRequest, res: NowResponse) => {
   let comparative = 'better';
