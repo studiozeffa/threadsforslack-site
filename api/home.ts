@@ -12,5 +12,5 @@ export default (req: NowRequest, res: NowResponse) => {
   }
 
   const comparativeCapitalized = comparative.charAt(0).toUpperCase() + comparative.slice(1);
-  res.status(200).send(`${comparativeCapitalized}!`)
+  res.status(200).send(`${host}, ${comparativeCapitalized}!`)
 }
