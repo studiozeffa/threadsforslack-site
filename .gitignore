@@ -1,7 +1,7 @@
 # File created using '.gitignore Generator' for Visual Studio Code: https://bit.ly/vscode-gig
 
-# Created by https://www.toptal.com/developers/gitignore/api/visualstudiocode,macos,node,now
-# Edit at https://www.toptal.com/developers/gitignore?templates=visualstudiocode,macos,node,now
+# Created by https://www.toptal.com/developers/gitignore/api/visualstudiocode,now,node,macos,sass
+# Edit at https://www.toptal.com/developers/gitignore?templates=visualstudiocode,now,node,macos,sass
 
 ### macOS ###
 # General
@@ -146,6 +146,12 @@ dist
 .now
 .vercel
 
+### Sass ###
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
+
 ### VisualStudioCode ###
 .vscode/*
 !.vscode/tasks.json
@@ -157,9 +163,8 @@ dist
 .history
 .ionide
 
-# End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,macos,node,now
+# End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,now,node,macos,sass
 
 # Custom rules (everything added below won't be overriden by 'Generate .gitignore File' if you use 'Update' option)
-
 
 .vercel
