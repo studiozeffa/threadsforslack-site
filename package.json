@@ -7,17 +7,17 @@
   "author": "",
   "license": "ISC",
   "scripts": {
-    "clean": "rimraf public/{css/*,js/*,images/*}",
+    "clean": "rimraf public/{css/*,js/*,images/*,fonts/*}",
     "lint-scss": "stylelint src/scss/*.scss --syntax scss || true",
     "scss": "node-sass --output-style compressed -o public/css src/scss",
     "autoprefixer": "postcss -u autoprefixer -r public/css/*",
     "lint": "eslint src/js || true",
     "uglify": "mkdirp public/js -p && uglifyjs src/js/*.js -m -c -o public/js/main.min.js",
-    "imagemin": "rsync -azP --delete src/images/ public/images/; imagemin src/images/* -o public/images",
+    "imagemin": "imagemin src/images/* -o public/images",
     "build:css": "run-s lint-scss scss autoprefixer",
     "build:js": "run-s lint uglify",
     "build:images": "run-s imagemin",
-    "build:fonts": "rsync -azP --delete src/fonts/ public/fonts/",
+    "build:fonts": "copyfiles src/fonts/ public/fonts/",
     "build": "run-s build:*"
   },
   "devDependencies": {
@@ -40,5 +40,8 @@
     "rimraf": "^2.5.4",
     "stylelint": "^9.4.0",
     "uglify-es": "^3.3.10"
+  },
+  "dependencies": {
+    "copyfiles": "^2.4.1"
   }
 }
